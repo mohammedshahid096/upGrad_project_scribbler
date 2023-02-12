@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ffeedd;
+}
+
+/* TODO ---------for main block css------------ */
+#mainblock {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#mainblock .col1 {
+    background-color: #fff;
+    border-radius: 11px;
+    width: 47%;
+    display: flex;
+    margin-bottom: 15px;
+    margin-right: 3%;
+    transition: box-shadow, 0.3s;
+}
+
+#mainblock .col1:hover {
+    box-shadow: 0px 0px 12px 5px #8080807a;
+}
+
+.postinfo {
+    background-color: #e8e8e8;
+    padding: 12px 10px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+
+.postinfo>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_namediv p {
+    font-weight: 700;
+    color: #584b4ba6;
+
+}
+
+#mainblock .title {
+    color: #584b4ba6;
+    font-weight: 600;
+}
+
+.postinfo>span {
+    float: right;
+}
+
+.postinfo .fas {
+    color: #878381;
+
+}
+
+/*! ------------------pop up css -----------------*/
+.deletepopup {
+    width: 100%;
+    height: 100vh;
+    background-color: #231f1fe3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10px auto;
+    padding: 8px 17px;
+    border: 1px solid #888;
+    width: fit-content;
+    border-radius: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-content button {
+    padding: 3px 17px;
+    border: none;
+    font-weight: 500;
+    color: white;
+}
+
+#yesbutton {
+    background-color: rgba(0, 128, 0, 0.758);
+}
+
+#nobutton {
+    background-color: rgba(255, 0, 0, 0.747);
+}
+
+/* Add Animation for pop ups */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/*TODO ----------------- media queris---------------------- */
+@media screen and (max-width:600px) {
+    .postbuttons button {
+        margin-left: 13px;
+    }
+
+    .row1 {
+        flex-direction: column;
+    }
+
+    .colum1,
+    .colum2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #mainblock {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #mainblock .col1 {
+        width: 100%;
+    }
+}

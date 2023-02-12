@@ -1,0 +1,80 @@
+#title_Post {
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.title_input {
+    font-size: large;
+    width: 100%;
+    text-align: center;
+    border: 1px solid red;
+    font-weight: 700;
+}
+
+.content_input {
+    font-size: large;
+    width: 100%;
+    text-align: center;
+    border: 1px solid red;
+    min-height: 350px;
+
+}
+
+.author {
+    font-size: x-large;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+#editbutton {
+    color: white;
+}
+
+#savebutton {
+    color: white;
+    display: none;
+}
+
+#content {
+    font-family: cursive;
+    margin-top: 7px;
+}
+
+#no_likes {
+    font-family: serif;
+    font-size: larger;
+    color: grey;
+}
+
+.comments textarea {
+    width: 70%;
+}
+
+#showcomments {
+    background-color: #e2e4e6;
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+#showcomments p {
+    background-color: #fff;
+    color: black;
+    padding: 5px;
+}
+
+.btn {
+    box-shadow: 1px 2px 3px #dc3545;
+}
+
+@media screen and (max-width:600px) {
+    .comments textarea {
+        width: 100%;
+    }
+
+    #title_Post {
+        font-size: 20px;
+    }
+}

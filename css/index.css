@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* header part css */
+header .container-fluid {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.row1 {
+    display: flex;
+    padding: 10px 2%;
+}
+
+.colum1 {
+    width: 70%;
+}
+
+.colum1 h1 {
+    font-family: 'Montez', cursive;
+    color: blue;
+    margin: 0;
+}
+
+.colum1 h6 {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.colum2 {
+    width: 30%;
+}
+
+header #buttondiv button {
+    width: fit-content;
+    /* display: inline; */
+    background-color: blue;
+    padding: 3px 9px;
+    border: 1px gray solid;
+    color: white;
+    text-transform: capitalize;
+    box-shadow: 1px 2px 3px #948282a3;
+    margin-left: 12px;
+    float: right
+}
+
+header #buttondiv button:focus {
+    background-color: rgba(0, 0, 255, 0.594);
+}
+
+header .row2 {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.postbuttons button {
+    background-color: #cfb53b;
+    margin-left: 40px;
+    padding: 3px 11px;
+    text-transform: capitalize;
+    font-weight: 500;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 4px 0px #8080809e;
+    width: 85px;
+}
+
+.postbuttons button:focus {
+    background-color: #ac942cd6;
+}
+
+/*! ------------------pop up css -----------------*/
+.modal {
+    width: 100%;
+    height: 100vh;
+    background-color: #3d3d3db1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10px auto;
+    padding: 8px 17px;
+    border: 1px solid #888;
+    width: 34%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* The Close Button */
+.close {
+    color: gray;
+    float: right;
+    font-size: 21px;
+
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 0;
+    color: gray;
+    border-bottom: none;
+}
+
+.modal-body {
+    /* padding: 2px 16px; */
+    padding: 0;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+    height: 1.5px;
+}
+
+.inputgroup label {
+    font-size: x-large;
+    margin-bottom: 3px;
+    padding-left: 2px;
+}
+
+.inputgroup input {
+    background-color: #f1f1f1f1;
+}
+
+#createsignup {
+    background-color: #56b762;
+    width: 100%;
+    margin-top: 25px;
+    border: none;
+    color: #ffff;
+    padding: 4px;
+    margin-bottom: 11px;
+    box-shadow: 1px 2px 3px grey;
+    font-weight: 700;
+
+}
+
+#signinfooter {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: medium;
+}
+
+#signinfooter span {
+    color: blue;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+/* chnaging width for createpost modal pop up */
+#createpostmodal .modal-content {
+    width: 86%;
+}
+
+#createpostmodal textarea {
+    width: 100%;
+    background-color: #f1f1f1f1;
+}
+
+#submitcreatepost {
+    background-color: #56b762;
+    width: fit-content;
+    margin: 20px auto;
+    border: none;
+    color: #ffff;
+    padding: 4px 26px;
+    margin-bottom: 11px;
+    box-shadow: 1px 2px 3px grey;
+    font-weight: 700;
+}
+
+/* Add Animation for pop ups */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/*TODO ----------------- media queris---------------------- */
+@media screen and (max-width:600px) {
+    .postbuttons button {
+        margin-left: 13px;
+    }
+
+    .row1 {
+        flex-direction: column;
+    }
+
+    .colum1,
+    .colum2 {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css " rel="stylesheet "
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- google fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons link -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+
+    <!-- index file link -->
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+
+<body>
+    <!-- header div -->
+    <header>
+        <div class="container-fluid">
+            <div class="row1">
+                <div class="colum1">
+                    <h1>ScriBBler</h1>
+                    <h6>Explore, Imagine, Create</h6>
+                </div>
+                <div class="colum2" id="buttondiv">
+                    <button onclick="showsignin()">sign In</button>
+                    <button onclick="showsignup()">sign up</button>
+                </div>
+            </div>
+
+            <div class="row2 d">
+                <div class="postbuttons d-flex justify-content-center">
+                    <button onclick="showallposts()">All Post</button>
+                    <button onclick="showcreatepost()">Create Post</button>
+                </div>
+            </div>
+
+            <!-- TODO -----------------pop up signup -------------------------- -->
+            <div id="signupmodal" class="modal">
+                <!-- Modal content  -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Get Started</h2>
+                        <i class="fas fa-times close" onclick="hidesignupPOP()"></i>
+                    </div>
+                    <div class="modal-body">
+                        <hr>
+                        <form action="" method="get">
+                            <div class="mt-2 inputgroup">
+                                <label for="">Name</label>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Enter your name"
+                                    aria-label="Username" required>
+                            </div>
+                            <div class="mt-2 inputgroup">
+                                <label for="">Username</label>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Enter your username"
+                                    aria-label="Username" required>
+                            </div>
+                            <div class="mt-2 inputgroup">
+                                <label for="">Password</label>
+                                <br>
+                                <input type="password" class="form-control" placeholder="Enter your password"
+                                    aria-label="Username" required>
+                            </div>
+                            <div class="mt-2 inputgroup">
+                                <label for="">Confirm Password</label>
+                                <br>
+                                <input type="password" class="form-control" placeholder="Re-enter password"
+                                    aria-label="Username" required>
+                            </div>
+
+                            <button id="createsignup" type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO ---------------- pop up sigin---------------------------- -->
+            <div id="signinmodal" class="modal">
+                <!-- Modal content  -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Welcome Back!</h2>
+                        <i class="fas fa-times close" onclick="hidesigninPOP()"></i>
+                    </div>
+                    <div class="modal-body">
+                        <hr>
+                        <form action="" method="get">
+                            <div class="mt-2 inputgroup">
+                                <label for="">Username</label>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Enter your username"
+                                    aria-label="Username" required>
+                            </div>
+                            <div class="mt-2 inputgroup">
+                                <label for="">Password</label>
+                                <br>
+                                <input type="password" class="form-control" placeholder="Enter your password"
+                                    aria-label="Username" required>
+                            </div>
+
+                            <button id="createsignup" type="submit">Sign Up</button>
+                            <p id="signinfooter">Not a member? <span onclick="singinfooter()">sign up</span> </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO ---------------- pop up create post model---------------------------- -->
+            <div id="createpostmodal" class="modal">
+                <!-- Modal content  -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Pen Your Post</h2>
+                        <i class="fas fa-times close" onclick="hidecreatepostPOP()"></i>
+                    </div>
+                    <div class="modal-body">
+                        <hr>
+                        <form action="" method="get">
+                            <div class="mt-2 inputgroup">
+                                <label for="">Title</label>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Enter your title of your post"
+                                    aria-label="Username" required>
+                            </div>
+                            <div class="mt-2 inputgroup">
+                                <label for="">Contents</label>
+                                <br>
+                                <textarea class="form-control" id="" cols="10" rows="10"
+                                    placeholder="Enter the contents of your post"></textarea>
+                            </div>
+                            <center><button id="submitcreatepost" type="submit">Create</button></center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+
+
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css " rel="stylesheet "
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- google fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons link -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+
+    <!-- header file is included -->
+    <link rel="stylesheet" href="../css/header.css">
+
+    <!-- css file of post link -->
+    <link rel="stylesheet" href="../css/post.css">
+</head>
+
+<body>
+    <!-- TODO: Include code for header here -->
+    <header>
+        <div class="container-fluid">
+            <div class="row1">
+                <div class="colum1">
+                    <h1>ScriBBler</h1>
+                    <h6>Explore, Imagine, Create</h6>
+                </div>
+                <div class="colum2" id="buttondiv">
+                    <button onclick="showsignin()">sign In</button>
+                    <button onclick="showsignup()">sign up</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container" id="mainDiv">
+        <div id="title_Post">Everything you should know about 'module' & 'require' in Node.js</div>
+
+        <div class="d-flex justify-content-between">
+            <div class="author">Srishti Gupta</div>
+            <button id="editbutton" class="btn btn-danger" onclick="editfunction()">Edit &nbsp;<i
+                    class="fas fa-edit"></i> </button>
+            <button id="savebutton" class="btn btn-danger" onclick="savefunction()">Save &nbsp;<i
+                    class="fas fa-save"></i> </button>
+        </div>
+
+        <div id="content">
+            Node js treats cach Javascript tile as a separate module For instance, it you have a tile containing sone
+            code and this tie is named xyz.Js, then this tie is treated as a module in ode, and you
+            can say that you ve created a module named xyz. Let s take an example to understand this better. You have a
+            file named circle js which consists of the logic tor calculating the area & the
+            Circumierence ot a Circle ot a given radius. You can call circle.js tile a module named circle. You might be
+            wodering why 1s there a need to have multiple modules? Iou could have just
+            Tmagine that there'a a large aoplieation and vot have all vor code writen in inst one nlace ust one fle Too
+            mesw right? Ho does the code written inside a module nn? Before eeeuting
+            the code witten inside a module, Node takes the entire code and encloses it within a function wrapper. The
+            syntax of this function Wrapper 1s: The entire code written inside a module is
+            private to the modulc, uniess explicitiy stated (exported) otheW1Se. his 1s the most signiticant advantage
+            ot having moduies n ode.js. Even it you detine a giobal variabie in a moduie using
+            var, iet or const keywords, the variabies are scoped locaily to the module rather than being scoped
+            globaily. his happens because cach module has a unction wrapper ot its own ana the code
+            WTitten inside one tunction is local to that function and cannot be accessed outside this function. Imagine
+            that there are two modules-A andB. The code writen inside the module A 1s
+            enelosed inhin diferet fmction hese fctione ilt not he hle to access he cde ofench orher emember each
+            fmetion in TasraSeriot has it o local sconeThis ie the reason hw
+            module A cannot access the code written inside module B and vice-versa. The five parameters exports,
+            require, module,filename. dirname are available inside each module in Node.
+            Though these paraneters are global to the code within a module yet they are local to the module (because ot
+            the tunction WIapper as explained above). T hese pararneters provide valuatble
+            intormation related to a module. Let s revisit the circie module, which you looked at carliet. here are
+            three constructs detined in this moduie a constat variabie P, a runction named
+            calculateArea and another function named calculateCircumference. An important point to keep in mind 1s that
+            all these constructs are private to the circle module by default. It means that you
+            modale? This ia hen the modle reuire narametersof the frtion wrapner re helnfial Tet'disrs theue tn
+            narameters in this artiele madle The modale nerameter frother keod
+            in a module in Node) reters to the object representing the current module. exports 1s a key of the module
+            object, the corresponding value of which 1s an object. The default value of
+            moduie.exports o0ject is t (etupiy ooject). 1ou can check this oy Jogging he vaiue or moue keywora nsiae an
+            noduie. Let s ctheck Waar 1s te value or nouie pär atneter iS3de tne ctcie
+            module. Notice that there is a consoie.iog(moduie), statement at the end ot the code in the tile given
+            above. when you see the output, it wil iog the module object, which has a key hamed
+            exports and the value corresponding to this key 1s (an empty object). Now, what does the module.exports
+            object do Well, it is used tor defining stuff that can be exported by a module.
+            wte eote rooue can n ea aaaor e setn 5 quite easy. 10u Just need to add t to the mouuie expots opyect 1here
+            are ttee
+            ways to
+        </div>
+
+
+        <div class="mt-3">
+            <button class="btn btn-danger" id="likebutton"><i class="fas fa-thumbs-up"></i> Like</button>
+            <p class="mt-3" id="no_likes">Be the first one to like this!</p>
+        </div>
+
+        <div class="comments">
+            <textarea name="" id="addcomment" rows="2" placeholder="Leave a comment..."></textarea>
+            <br>
+            <button class="btn btn-danger mt-2" onclick="addcommentfun()">Comment</button>
+            <h5 class="mt-3">All Comments</h5>
+            <div id="showcomments">
+                <!-- ! data will be added through js when the comment is added -->
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../scripts/post.js"></script>
+
+</html>
